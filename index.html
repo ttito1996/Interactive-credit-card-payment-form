@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Credit Card Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/824342e70e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="interactive-card">
+         <div class="card-back">
+           <div class="cvv-container">
+             <span class="cvv">000</span>
+           </div>
+         </div>
+         <div class="card-front">
+           <div class="logo">
+             <img src="./images/card-logo.svg" alt="" class="card-logo">
+           </div>
+           <div class="card-number">0000 0000 0000 0000</div>
+           <div class="name-exp">
+             <span class="card-name">jane appleseed</span>
+             <span class="card-expiry"><span class="card-month">08</span>/<span class="card-year">2022</span>
+           </div>
+         </div>
+        </div>
+         <div class="form-section">
+           <form action="" class="form">
+               <div class="field">
+                 <label for="credit-name">Name on Card</label><br>
+                 <input type="text" class="credit-name" inputmode="text" autocomplete="cc-name" value="" placeholder="e.g.Jane Appleseed" size="30">
+                 <p id="error-for-name" class="field-error-message">Enter a name</p>
+               </div>
+               <div class="field">
+                 <label for="credit-number">card number</label><br>
+                 <input type="text" class="credit-number" value="" autocomplete="cc-number" placeholder="e.g.1234 5678 9123 0000" size="16" maxlength="16">
+                 <p id="error-for-number" class="field-error-message">Enter a card number</p>
+               </div>
+               <div class="field">
+                 <label for="expiry-month">exp.date(mm/yy)</label><br>
+                 <input type="text" class="expiry-month" id="month" inputmode="numeric" autocomplete="cc-exp-month" placeholder="mm" size="2" maxlength="2">
+                 <label for="expiry-year" hidden>exp.date(mm/yy)</label>
+                 <input type="text" class="expiry-year" inputmode="numeric" autocomplete="cc-exp-year" placeholder="yyyy" size="4" maxlength="4">
+                 <p id="error-for-date" class="field-error-message">Enter a valid date</p>
+               </div>
+               <div class="field">
+                 <label for="cvc-number">cvc</label><br>
+                 <input type="text" class="cvc-number" inputmode="numeric" autocomplete="cc-csc" placeholder="e.g.123" size="4">
+                 <p id="error-for-cvc" class="field-error-message">Enter a cvc</p>
+               </div>
+                 <button type="submit" value="submit" class="btn">Add Card</button>
+           </form>
+         </div>
+       </div>
+       <script src="./main.js"></script>
+</body>
+</html>
