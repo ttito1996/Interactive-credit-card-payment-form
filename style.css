@@ -1,0 +1,225 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    font-style: normal;
+    font-size: 1rem;
+    text-rendering: optimizeLegibility;
+    background: url(./images/bg-main-mobile.png) 0 0 no-repeat;
+    background-color: #f2f2f2;
+    background-size: 100% 240px;
+}
+
+@media screen and (min-width:1025px) { 
+    body {
+        background: url(./images/bg-main-desktop.png) 0 0 no-repeat;
+        background-size: auto 100%;
+        background-color: #f2f2f2;
+    }
+}
+
+.wrapper {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.interactive-card {
+    width: 343px;
+    height: 300px;
+    position: relative;
+    padding-top: 32px;
+    margin-bottom: 38px;
+}
+
+@media screen and (min-width:1025px) {
+   .wrapper {
+    padding-top: 190px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: unset;
+   }
+
+   .interactive-card {
+    margin-bottom: 0px;
+    margin-right: 127px;
+   }
+    
+}
+
+.card-back {
+    width: 286px;
+    height: 157px;
+    background-image: url(./images/bg-card-back.png);
+    background-size: cover;
+    position: absolute;
+    right: 0px;
+}
+
+.cvv-container {
+    position: absolute;
+    top: 65px;
+    left: 225px;
+}
+
+.cvv {
+    font-size: 0.75rem;
+    color: #FFFFFF;
+}
+
+.card-front {
+    width: 286px;
+    height: 157px;
+    background: linear-gradient(162.92deg,#a8a191 16.49%,#bba897 52.02%,#caa480 70.74%,#e4966d 89.84%);
+    background-size: cover;
+    position: absolute;
+    z-index: 3;
+    top: 130px;
+    left: 0px;
+    padding: 17px 20px 19px 19px;
+    border-radius: 6px;
+}
+
+.logo {
+    width: 54px;
+    margin-bottom: 30px;
+}
+
+.card-logo {
+    width: 100%;
+    height: auto;
+}
+
+.card-number {
+    font-size: 1.125rem;
+    color: #FFFFFF;
+    letter-spacing: 2.2px;
+    margin-bottom: 15px;
+}
+
+.card-name {
+    font-size: 0.688rem;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.name-exp {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.card-expiry {
+    font-size: 0.688rem;
+    color: #FFFFFF;
+}
+
+.form-section {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px 0px;
+}
+
+.form {
+    padding: 20px;
+}
+
+.field {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+input {
+    width: 100%;
+    border: 1px solid #DFDEE0;
+    border-radius: 8px;
+    margin-top: 9px;
+    transition: all 0.2s ease-out;
+}
+
+input::placeholder {
+    color: #6d6d6b;
+    opacity: 1;
+}
+
+input:focus {
+    outline: none;
+    border-color: #153e66;
+    box-shadow: 0 0 0 1px #153e66;
+}
+
+.field-error-message {
+    font-size: 0.875rem;
+    color: #e32c2b;
+    margin-top: 9px;
+    display: none;
+}
+
+
+.credit-name {
+    padding: 11px 137px 11px 16px;
+}
+
+.credit-number {
+    padding: 11px 91px 11px 16px;
+    background: url(./images/credit-card-solid.svg) no-repeat scroll;
+    background-position: 98%;
+    background-size: 30px;
+}
+
+.expiry-month {
+    padding: 10px;
+    width: 40%;
+    text-transform: uppercase;
+}
+
+.expiry-year {
+    padding: 10px;
+    width: 40%;
+    text-transform: uppercase;
+}
+
+.cvc-number {
+    padding: 10px;
+    width: 40%;
+}
+
+.add-btn {
+    margin-bottom: 20px;
+}
+
+button {
+    text-align: center;
+    padding: 15px 130px;
+    white-space: nowrap;
+    width: 100%;
+    border-radius: 8px;
+    color: #FFFFFF;
+    background-color: #0c243c;
+    border-style: none;
+    cursor: pointer;
+    transition: transform .2s cubic-bezier(.235,0,.05,.95);
+}
+
+button:hover {
+    transform: perspective(1px)scale(1.044)translate(0,0);
+}
